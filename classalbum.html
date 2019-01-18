@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/classalbum.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="title">
+            <h1>2017-12-25 | 星期一 16:12</h1>
+        </div>
+        <div class="weekly_course">
+            <h3>
+                <span class="imgst"><img src="img/back.png" alt=""></span>    
+                <span>2018夏季家电维修班</span>
+                <span>201801班次</span>
+                <span>班级相册</span>
+            </h3>
+        </div>
+        <div class="pic" id="box">
+            <ul>
+                <li><img src="img/active1.jpg" alt=""></li>
+                <li><img src="img/active2.jpg" alt=""></li>
+                <li><img src="img/active1.jpg" alt=""></li>
+                <li><img src="img/active1.jpg" alt=""></li>
+                <li><img src="img/active1.jpg" alt=""></li>
+                <li><img src="img/active1.jpg" alt=""></li>
+                <li><img src="img/active1.jpg" alt=""></li>
+            </ul>
+            <div class="page">
+                <span><</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>></span>
+            </div>
+        </div>
+        <!-- <div id="box">
+                <div><img src="img/active1.jpg" /></div>
+                <div><img src="img/active2.jpg" /></div>
+                <div><img src="img/active1.jpg" /></div>
+                <div><img src="img/active1.jpg" /></div>
+                <div><img src="img/active2.jpg" /></div> 
+            </div> -->
+            <script>
+            //  注意：要在图片加载完之后才能获取到图片对象
+                window.onload = function() {
+                    var box = document.getElementById("box");
+                    var imgs = box.getElementsByTagName('img');
+                    for (let i = 0; i < imgs.length; i++) {
+                        console.log(i)
+                            var w = imgs[i].offsetWidth,
+                                h = imgs[i].offsetHeight
+                        w > h ? imgs[i].style.width = '100%' : imgs[i].style.height = '100%'
+                    }
+                }
+            </script>
+    </div>
+</body>
+</html>
